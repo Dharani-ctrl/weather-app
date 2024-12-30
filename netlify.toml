@@ -1,9 +1,10 @@
 [build]
   publish = "/"
-  command = "npm run build"  # Optional if you're using a build tool
+  command = "echo 'No build command needed'"  # Use this if you're not running a build command
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
   force = true
+
