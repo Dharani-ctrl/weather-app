@@ -4,54 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <link rel="icon" type="png" href="img/icon.png" />
+    <link rel="icon" type="image/png" href="img/icon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     
     <title>Weather App</title>
   </head>
 
   <body>
     <div class="pc">
-      
+      <!-- Navigation Menu -->
       <nav>
         <ul>
           <li>
-            <a class="active" href="index.html"
-              ><i class="fa-solid fa-location-arrow"></i
-            ></a>
+            <a class="active" href="index.html" aria-label="Home">
+              <i class="fa-solid fa-location-arrow"></i>
+            </a>
           </li>
           <li>
-            <a href="search.html"
-              ><i class="fa-solid fa-magnifying-glass"></i
-            ></a>
+            <a href="search.html" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
           </li>
           <li>
-            <a href="world.html"><i class="fa-solid fa-earth-americas"></i></a>
+            <a href="world.html" aria-label="World Weather">
+              <i class="fa-solid fa-earth-americas"></i>
+            </a>
           </li>
         </ul>
       </nav>
       
+      <!-- Main Screen -->
       <div id="screen">
-        
+        <!-- City Name Section -->
         <div class="city-name">
           <i class="fa-solid fa-map-pin"></i>
           <h1 id="city-name">Salem</h1>
         </div>
       
+        <!-- Weather Icon Section -->
         <div class="weather-icon-css">
-          <img class="weather-icon" src="img/sun.png" />
+          <img class="weather-icon" src="img/sun.png" alt="Weather Icon" />
         </div>
         
+        <!-- Weather Details Section -->
         <div class="weather-description">
           <div class="show-metric" id="metric">0°</div>
           <div class="weather-details">
-            <div class="weather-main" id="weather-main">Sunnen</div>
+            <div class="weather-main" id="weather-main">Sunny</div>
             <div class="h-f">
-              <div class="show-humidity">H: <span id="humidity">60</span></div>
+              <div class="show-humidity">
+                H: <span id="humidity">60</span>
+              </div>
               ||
               <div class="show-humidity">
                 F: <span id="feels-like">60</span>
@@ -60,20 +67,22 @@
           </div>
         </div>
        
-        <div class="forcasts-box">
+        <!-- Forecast Section -->
+        <div class="forecasts-box">
+          <!-- Today's Weather -->
           <div class="today-forecast">
             <h4>TODAY</h4>
             <div class="weather-icon-today">
-              <img class="weather-icons" src="img/sun.png" />
+              <img class="weather-icons" src="img/sun.png" alt="Today Weather Icon" />
             </div>
             <div class="temp-today">
-              <span id="temp-min-today">50°</span><span>/ </span
-              ><span id="temp-max-today">55°</span>
+              <span id="temp-min-today">50°</span><span>/ </span>
+              <span id="temp-max-today">55°</span>
             </div>
-            <div class="weather-main-today" id="weather-main">Sunnen</div>
+            <div class="weather-main-today" id="weather-main">Sunny</div>
           </div>
 
-          
+          <!-- 6-Day Forecast -->
           <div class="forecast">
             <h5>6-DAYS FORECAST</h5>
             <div id="forecast-box"></div>
@@ -82,7 +91,7 @@
       </div>
     </div>
     
-    
+    <!-- Main JavaScript File -->
     <script src="js/main.js"></script>
   </body>
 </html>
